@@ -44,3 +44,38 @@
 ```
 
 ![image-20210326205252505](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210326205252.png)
+
+```c++
+#include<iostream>
+#include<cstring>
+using namespace std;
+const int N = 15;
+int f[N][N]; // f[i][j] 表示把 i 分成 j 个数的方案总数
+int main()
+{
+    int t, m, n;
+    cin >> t;
+   
+    while(t--)
+    {
+        memset(f,0,sizeof f);
+        f[0][0] = 1;
+        cin >> m >> n;
+        for(int i = 0; i <= m;i++)
+            for(int j = 1; j <= n;j++) // 分成0个没有意义
+            {
+                f[i][j] = f[i][j-1];
+                
+                if( i >= j)
+                {
+                    f[i][j]  += f[i-j][j]; 
+                }
+            }
+            cout << f[m][n] << endl; // 把m分成 n 个数
+    }
+    
+    
+    return 0;
+}
+```
+
