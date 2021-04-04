@@ -6,13 +6,13 @@
 
 lower_bound(begin,end,num)  可以是数组元素的地址
 
-从数组的begin位置到end-1 位置查找第一个大于或等于 num 的数字，返回该数字的地址，
+从数组的begin位置到end-1 位置查找第一个==大于或等于 num==的数字，返回该数字的地址，
 
 不存在返回 end ，
 
 ### upper_bound(begin,end,num)
 
-从数组的begin位置到end-1 位置二分查找第一个大于num 的数字，找到返回该数字的地址
+从数组的begin位置到end-1 位置二分查找==第一个大于num== 的数字，找到返回该数字的地址
 
 不存在返回end 
 

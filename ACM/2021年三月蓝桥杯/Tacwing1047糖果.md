@@ -8,6 +8,10 @@
 
 `a%b` ->`(a+b)%b`
 
+
+
+## ==求余的一些性质==
+
 <img src ="https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210327101959.png" style="zoom:50%;" />
 <img src ="https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210327102006.png" style="zoom:50%;" />
 
