@@ -60,7 +60,7 @@
 
 题意：在一棵树中找到一个连通块使得其和最大	
 
-![image-20210329204513823](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo@master/img/20210329204513.png)
+<a href="https://imgtu.com/i/c3LKwd"><img src="https://z3.ax1x.com/2021/04/07/c3LKwd.png" alt="c3LKwd.png" border="0" /></a>
 
 ```c++
 #include<iostream>

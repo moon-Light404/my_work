@@ -42,7 +42,7 @@
 
  用集合和状态DP分析:
 
-![image-20210303204651735](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210316160614.png) 
+<a href="https://imgtu.com/i/c3qXWV"><img src="https://z3.ax1x.com/2021/04/07/c3qXWV.md.png" alt="c3qXWV.png" border="0" /></a>
 
 
 
@@ -171,7 +171,7 @@ int main()
 10
 ```
 
-<img src="https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210316160756.png" alt="img" style="zoom: 33%;" />
+<a href="https://imgtu.com/i/c3q7Zj"><img src="https://z3.ax1x.com/2021/04/07/c3q7Zj.png" alt="c3q7Zj.png" border="0" /></a>
 
 
 
