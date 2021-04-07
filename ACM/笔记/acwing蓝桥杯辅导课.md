@@ -193,12 +193,6 @@ int main(){
 
 
 
-![img](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210322120633.png)
-
-
-
-
-
 
 
 #### ==acwing795 前缀和==
@@ -259,17 +253,7 @@ int main(){
 }
 ```
 
-![img](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210322120745.png)
 
-
-
-![img](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210322120714.png)
-
-![img](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210322120726.png)
-
-
-
-![img](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210322120800.png)
 
 
 
@@ -281,15 +265,11 @@ int main(){
 
 ### 背包问题
 
-![img](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210322120816.png)
-
 
 
 ### 完全背包问题
 
 ![img](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210316155923.png)
-
-
 
 
 
@@ -308,10 +288,6 @@ int main(){
 <b>解析</b>
 
 可以把两只蚂蚁相撞等价于<b>穿过</b>，因为两只蚂蚁相撞之后状态是一样的，最后所有蚂蚁一定会全部离开木棍。
-
-![img](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210322120834.png)
-
-![img](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210322120850.png)
 
 
 
