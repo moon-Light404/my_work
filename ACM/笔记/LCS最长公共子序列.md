@@ -32,3 +32,30 @@ $0 如果 x=0 或者 y = 0$
 
 ---
 
+```c++
+#include<iostream>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+const int N = 1010;
+int f[N][N]; // f[i][j] 表示s1前i个字符和 s2前j个字符公共子序列的最大值
+char s1[N], s2[N];
+int main()
+{
+    int m,n;
+    cin >> m >> n; // 字符串的长度
+    cin >> s1+1 >> s2+1;
+    f[1][0] = f[0][1] = 0;
+    for(int i = 1;i <= m;i++)
+    {
+        for(int j = 1; j <= n;j++)
+        {
+            if(s1[i] == s2[j])  f[i][j] = f[i-1][j-1]+1;
+            else f[i][j] = max(f[i-1][j],f[i][j-1]);
+        }
+    }
+    cout << f[m][n];
+    return 0;
+}
+```
+
