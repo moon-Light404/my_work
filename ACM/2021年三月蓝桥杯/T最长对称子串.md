@@ -39,7 +39,7 @@ int main()
    	int Max = 1;
     for(int len = 1;len < n;len++) // 枚举子串长度
     {
-        for(int l = 0;l < n- len;l++)
+        for(int l = 0;l + len< n;l++)
         {
             int r = l + len;
             if(str[l] == str[r])

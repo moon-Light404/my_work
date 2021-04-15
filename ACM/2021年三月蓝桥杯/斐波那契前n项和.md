@@ -67,3 +67,59 @@ void mul(int c[][N],int a[][N],int b[][N])
 ```c++
 12
 ```
+
+```c++
+#include<iostream>
+#include<cstring>
+using namespace std;
+typedef long long LL;
+int n, m;
+const int N = 3;
+// 一维乘以三维 --> 结果为一维
+void mul(int c[],int a[],int b[][N]) // a是一维，b是二维
+{
+    int temp[N] = {0};
+    for(int i = 0;i < N;i++)
+        for(int j = 0;j < N;j++) // 枚举a的一行数
+            temp[i] = (temp[i] + (LL)a[j] * b[j][i]) % m; 
+            // 第n个元素 == a的第一行 * b的第n列
+    memcpy(c,temp,sizeof temp);
+}
+
+// 多维乘以多维矩阵
+void mul(int c[][N],int a[][N],int b[][N])
+{
+    int temp[N][N] = {0};
+    for(int i = 0;i < N;i++)
+        for(int j = 0;j < N;j++)
+            for(int k = 0;k < N;k++) // 新增一层循环
+            {
+                temp[i][j] = (temp[i][j]+(LL)a[i][k]*b[k][j])%m;
+                // temp[i][j]== a的第i行 * b的第j列
+            }
+    memcpy(c,temp,sizeof temp);
+}
+
+int main()
+{
+    int f1[N] = {1,1,1};
+    // 连乘矩阵
+    int A[N][N]={
+        {0,1,0},
+        {1,1,1},
+        {0,0,1},
+    };
+    cin >> n >>m;
+    n--;
+    // 快速幂
+    while(n)
+    {
+        if(n&1) mul(f1,f1,A);
+        mul(A,A,A); // A = A * A,每右移一位乘以一个A
+        n >>= 1;
+    }
+    cout << f1[2] << endl;
+    return 0;
+}
+```
+
