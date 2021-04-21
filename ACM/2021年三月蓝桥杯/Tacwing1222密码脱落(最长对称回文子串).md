@@ -1,11 +1,5 @@
 ## 密码脱落(区间DP)
 
-- [  题目](https://www.acwing.com/problem/content/description/1224/)
-- [  提交记录](https://www.acwing.com/problem/content/submission/1224/)
-- [  讨论](https://www.acwing.com/problem/content/discussion/index/1224/1/)
-- [  题解](https://www.acwing.com/problem/content/solution/1224/1/)
-- [  视频讲解](https://www.acwing.com/problem/content/video/1224/)
-
 X星球的考古学家发现了一批古代留下来的密码。
 
 这些密码是由A、B、C、D 四种植物的种子串成的序列。
