@@ -37,3 +37,13 @@ while(rs.next()) // 遍历每一条记录
 
 ---
 
+### `setString方法`
+
+```java
+String sql = "select name from user where user id=?And password=?" 
+pstmt = con.prepareStatement(sql);
+pstmt.setString(1,request.getParameter("id"));
+pstmt.setString(2,request,getParameter("password"));
+rs = pstmt.executeQuery();
+```
+
