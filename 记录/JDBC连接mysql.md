@@ -46,4 +46,3 @@ pstmt.setString(1,request.getParameter("id"));
 pstmt.setString(2,request,getParameter("password"));
 rs = pstmt.executeQuery();
 ```
-
