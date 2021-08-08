@@ -7,7 +7,6 @@ https://zhuanlan.zhihu.com/p/95902286知乎链接
 using namespace std;
 int cnt = 0;
 
-
 int qpow(int a, int n) {
 	cnt++;
 	cout << "times of cnt:" << cnt << endl;
