@@ -12,7 +12,7 @@
 
 ![image-20210301194835639](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210301194835.png)
 
-==`M = (L+R+1)/2`是为了防止 L 的值一直不变而导致死循环==
+`M = (L+R+1)/2`是为了防止 L 的值一直不变而导致死循
 
 ![image-20210301195405293](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo/img/20210301195405.png)
 
@@ -32,7 +32,7 @@
 ```c++
 int binarySearch(int arr[],int key){
     int low = 0;
-    int high = sizeof(arr).sizeof(int) - 1;
+    int high = sizeof(arr)/sizeof(int) - 1;
     int mid = 0;
     
     while(low <= high){
