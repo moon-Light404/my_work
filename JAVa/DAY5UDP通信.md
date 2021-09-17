@@ -128,3 +128,54 @@ Client发送消息
 - 如果消息为`M_SUCCESS`，向其他所有在线用户发送`M_LOGIN`消息，同时向新登录者发送整个用户列表(`M_ACK`)
 - Server收到`M_MSG`和`M_QUIT`消息后，向其他所有在线用户转发收到的`data`数组即可。
 
+
+
+
+
+### 一般的UDP建立通信的步骤
+
+**服务器**
+
+```java
+// 1、创建DatagramSocket,指定端口号
+// 2、创建DatagramPacket
+// 3、接收客户端发送的消息
+// 4、读取数据
+/*
+  接收客户端发送的数据-----接收
+*/
+// 1.创建服务器端DatagramSocket，指定端口
+DatagramSocket socket = new DatagramSocket(8000);
+// 2.创建数据报，用于接收客户端发送的数据，保存在data数组中
+byte[] data = new byte[1024];
+DatagramPacket packet = new DatagramPacket(data,data.
+                                          length);
+// 3.接收客户端发送的数据
+socket.receive(packet); // 此方法在接收到数据之前一直阻塞
+// 4.读取数据
+String info = new String(data,0,packet.getLength());
+// 方式二读取
+String info = new String(packet.getData);
+
+
+
+/*
+向客户端响应数据-----发送
+*/
+// 1.定义客户端的地址、端口号、数据
+InetAddress address = packet.getAddress();
+int port = packet.getPort();
+byte[] data2 = "欢迎你".getBytes();
+// 2.创建数据报，包含响应的数据信息
+DatagramPacket packet2 = new DatagramPacket(data2,data2.length,address,port); // 指定客户的地址和端口号
+// 3.响应客户端。发送报文
+socket.send(packet2);
+// 4.关闭资源
+socket.close();
+
+```
+
+
+
+
+

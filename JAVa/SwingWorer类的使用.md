@@ -60,7 +60,7 @@ Runnable, Future<T>, RunnableFuture<T>
 
 
 
-方法
+> 方法
 
 `protected abstract T doInBackground()`
 
@@ -103,7 +103,16 @@ Runnable, Future<T>, RunnableFuture<T>
 - 工作线程：在这个线程上调用了doInBackground()方法。 这是所有背景活动都应该发生的地方。
 - 事件调度线程EDT：所有Swing相关活动发生在此线程上。
   
+  一般当前线程是EDT，当在当前线程中执行excute方法后，在工作线程上执行swingworker（注意为什么不是直接进入工作线程呢，是因为是并发执行的，具体什么时候看CPU)，即调用doInBackground方法，
 
-一般当前线程是EDT，当在当前线程中执行excute方法后，在工作线程上执行swingworker（注意为什么不是直接进入工作线程呢，是因为是并发执行的，具体什么时候看CPU)，即调用doInBackground方法，这时候，状态由PENDING进入STARTED。在此方法中，如果希望获得中间结果，可以用publish(V chunk)方法，chunk是中间结果，一旦publish，就会将chunk送入process(List<V> chunks)方法中的chunks列表中，并且这个process方法在EDT中自动执行，这个方法非常漂亮的实现了任务线程与EDT之间的交互。当doInBackground方法执行完后，会使状态值STARTED变为DONE状态，并且自动执行在EDT中自动执行done方法，注意done是在EDT中执行的，所以这里也实现了交互，在done方法里调用get方法获取doInBackground的返回值。到此，整个swingworker就被执行完了，而且它只能够执行一次。
+​	这时候，状态由PENDING进入STARTED。在此方法中，如果希望获得中间结果，可以用publish(V chunk)方法，chunk是中间结果，一旦publish，就会将chunk送入process(List<V> chunks)方法中的chunks列表中，并且这个process方法在EDT中自动执行，这个方法非常漂亮的实现了任务线程与EDT之间的交互。
+
+​	当doInBackground方法执行完后，会使状态值STARTED变为DONE状态，并且自动执行在EDT中自动执行done方法，注意done是在EDT中执行的，所以这里也实现了交互，在done方法里调用get方法获取doInBackground的返回值。到此，整个swingworker就被执行完了，而且它只能够执行一次。
+
+
+
+
+
+
 
 https://www.cnblogs.com/monopole/p/7832840.html

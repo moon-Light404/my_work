@@ -54,7 +54,7 @@ factory = (ExampleInterface)c.newInstance();
 上面代码已经不存在Example的类名称，它的优点是，无论Example类怎么变化，上述代码不变，甚至可以更换Example的兄弟类Example2 , Example3 , Example4……，只要他们继承ExampleInterface就可以。任意创建实例化(接口实现类)
 ```
 
-
+<mark>类的加载</mark>指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个**java**.lang.Class对象，用来封装类在方法区内的数据结构。
 
 
 
