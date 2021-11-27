@@ -1,4 +1,4 @@
-# python爬虫分析
+#  python爬虫分析
 
 python是解释执行
 
@@ -12,8 +12,8 @@ if __name__ == '__main__':	# 当程序执行时
 ```python
 
 import  urllib.request
+ m
 
-#
 response = urllib.request.urlopen("http://www.baidu.com")
 print(response.read().decode('utf-8'))
 
@@ -49,6 +49,21 @@ print(response.read().decode('utf-8'))
 ```
 
 ## 提取网页的html代码
+
+- `urlib.request`中最常用的函数是网络请求`urlopen`，作用是发送HTTP请求，返回HTTP响应
+- 函数原型
+
+```python
+def urlopen(url,data=None,timeout=socket._GLOBAL_DEFAULT_TIMEOUT,....)
+```
+
+`url`:网路地址，是str类型，**也可以是一个`Request`对象，**
+
+`data`：这个是发送请求需要传递的参数，如果要传递data参数，urlopen将使用`post`方式请求。
+
+---
+
+
 
 <a href = "https://blog.csdn.net/qq_37616069/article/details/80376776">最简单的方式request模块</a>
 
@@ -121,10 +136,6 @@ Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节�
 **`BeattifulSoup`**:   整个文档
 
 **`comment`**:  
-
-
-
-
 
 
 
@@ -256,9 +267,9 @@ print(re.sub("a","A","abcdcasd"))# 找到a用A替换
 在正则表达式中，被比较的字符串前面加上 r ，不用担心转义字符的问题
 
 ```python
-a = r"\aabd=\'"
+a = r'\aabd=\'
 print(a)
-# \aabd-\'
+# \aabd=\
 # 如果没有加, \' 就是 '
 ```
 

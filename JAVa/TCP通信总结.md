@@ -113,7 +113,7 @@ Connect(SocketAddress endpoint,int timeout) 设置一个超时值
 
  
 
-![image-20210913203452860](TCP通信总结/image-20210913203452860.png)
+![image-20210913203452860](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022105156.png)
 
 
 

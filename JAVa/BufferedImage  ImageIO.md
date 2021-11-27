@@ -15,9 +15,9 @@ Toolkit   Tookit.getDefaultTookit()
 
 Dimension
 
-![image-20210924203111415](BufferedImage  ImageIO/image-20210924203111415.png)
+![image-20210924203111415](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022100831.png)
 
-![image-20210924203137508](BufferedImage  ImageIO/image-20210924203137508.png)
+![image-20210924203137508](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022100333.png)
 
 1）：创建一个Graphics2D，可以画到BufferedImage中。
 

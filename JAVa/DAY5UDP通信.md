@@ -2,7 +2,7 @@
 
 java.net中定义了支持UDP协议通信的两个类：`DatagramPacket(定义报文结构)`和`DatagramSocket(用于发送和接收报文)`。
 
-![image-20210910094549828](DAY5UDP通信/image-20210910094549828.png)
+![image-20210910094549828](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022101903.png)
 
 
 
@@ -10,17 +10,17 @@ java.net中定义了支持UDP协议通信的两个类：`DatagramPacket(定义�
 
 **接收报文**
 
-![image-20210910094727153](DAY5UDP通信/image-20210910094727153.png)
+![image-20210910094727153](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022101172.png)
 
 **发送报文**
 
-![image-20210910094737750](DAY5UDP通信/image-20210910094737750.png)
+![image-20210910094737750](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022101285.png)
 
 
 
 - `DatagramPacket`主要方法
 
-![image-20210910094836405](DAY5UDP通信/image-20210910094836405.png)
+![image-20210910094836405](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022101090.png)
 
 ----
 
@@ -28,13 +28,13 @@ java.net中定义了支持UDP协议通信的两个类：`DatagramPacket(定义�
 
 - `DatagramSocket`的构造函数
 
-![image-20210910094951425](DAY5UDP通信/image-20210910094951425.png)
+![image-20210910094951425](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022101531.png)
 
 
 
 - `DatagramSocket`主要方法
 
-![image-20210910095029943](DAY5UDP通信/image-20210910095029943.png)
+![image-20210910095029943](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022101096.png)
 
 
 
@@ -48,7 +48,7 @@ java.net中定义了支持UDP协议通信的两个类：`DatagramPacket(定义�
 
 ### 消息协议
 
-![image-20210910102237670](DAY5UDP通信/image-20210910102237670.png)
+![image-20210910102237670](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022101976.png)
 
 | 消息表示  | 消息描述                                                     |
 | --------- | ------------------------------------------------------------ |
@@ -63,13 +63,13 @@ java.net中定义了支持UDP协议通信的两个类：`DatagramPacket(定义�
 
 消息体
 
-![image-20210910104228952](DAY5UDP通信/image-20210910104228952.png)
+![image-20210910104228952](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022102837.png)
 
 
 
 用户类
 
-![image-20210910104247499](DAY5UDP通信/image-20210910104247499.png)
+![image-20210910104247499](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022102780.png)
 
 
 
@@ -89,7 +89,7 @@ Client对话界面
 
 - Client初始化函数有两个参数
 
-![image-20210910103711480](DAY5UDP通信/image-20210910103711480.png)
+![image-20210910103711480](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022102513.png)
 
 - 启动<mark>接收和处理消息线程</mark>(把当前对话的UDP套接字和对话窗口对象参数传入)
 

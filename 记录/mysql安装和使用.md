@@ -6,17 +6,17 @@ https://dev.mysql.com/downloads/windows/installer/
 
 ### 2、安装
 
-<img src = 'https://i.bmp.ovh/imgs/2021/04/1dddee693f6cfefa.png' style="zoom: 67%;" />
+<img src = 'https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022111688.png' style="zoom: 67%;" />
 
-<img src = 'https://i.bmp.ovh/imgs/2021/04/a6187170d6ed782d.png' style="zoom:67%;" />
+<img src = 'https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022111588.png' style="zoom:67%;" />
 
 ==密码：1234==
 
-<img src = 'https://i.bmp.ovh/imgs/2021/04/e85c9d2265c11028.png' style="zoom:67%;" />
+<img src = 'https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022111218.png' style="zoom:67%;" />
 
 ### 3、配置
 
-<img src = 'https://i.bmp.ovh/imgs/2021/04/c6c197b61346ffe0.png' />
+<img src = 'https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022111517.png' />
 
 
 
@@ -28,9 +28,9 @@ https://dev.mysql.com/downloads/windows/installer/
 - 输入`mysql -u root -p`回车输入密码
 - `show databases;`  `use + 数据库名称`; `show tables;`
 
-<img src = 'https://i.bmp.ovh/imgs/2021/04/4571e80d4f558b43.png' />
+<img src = 'https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022111209.png' />
 
-<img src = 'https://i.bmp.ovh/imgs/2021/04/26e97c78b8f68af7.png' />
+<img src = 'https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022111617.png' />
 
 `MySQL Workbench`可以是一个图形操作界面
 

@@ -196,7 +196,7 @@ public class ListFilesTest {
 
 ## 2.IO流
 
-![img](IO流/2cece5577c55fc427b9942a42e577fe4.png)
+![img](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022102617.png)
 
 ### 2.1 IO流原理
 
@@ -248,11 +248,11 @@ public class ListFilesTest {
 
 - JavaApI提供了带缓冲功能的流类，在使用这些流类时，会从创建一个内部缓冲数组，缺省使用8192个字节(8Kb)的缓冲区。
 
-  ![image-20210812133701582](IO流/image-20210812133701582.png)
+  ![image-20210812133701582](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022102646.png)
 
-![image-20210812133714328](IO流/image-20210812133714328.png)
+![image-20210812133714328](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022103280.png)
 
-![image-20210812133728017](IO流/image-20210812133728017.png)
+![image-20210812133728017](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022103606.png)
 
 - 缓冲流要<mark>套接在相应的节点流</mark>之上，根据数据操作单位可以把缓冲流分为：
   - `BufferedInputStream`和`BufferedOutputStream`
@@ -461,7 +461,7 @@ https://blog.csdn.net/u013087513/article/details/51956801
 
 ---
 
-![image-20210906092057986](IO流/image-20210906092057986.png)
+![image-20210906092057986](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo/img/202111022103259.png)
 
 以文件操作为例，在内存中的字符数据需要通过`OutputStreamWriter`变为<mark>字节流才能保存在文件</mark>中，读取的时候需要将读入的字节流通过`InputStreamReader`变为字符流。
 
