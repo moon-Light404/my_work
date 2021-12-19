@@ -13,7 +13,7 @@
 
 第一行两个整数，N，V，用空格隔开，分别表示物品数量和背包容积。
 
-接下来有 N 行，每行两个整数 vi,wi，用空格隔开，分别表示第 ii 件物品的体积和价值。
+接下来有 N 行，每行两个整数 vi,wi，用空格隔开，分别表示第 i件物品的体积和价值。
 
 输出格式
 
@@ -21,8 +21,8 @@
 
 数据范围
 
-0<N,V≤10000<N,V≤1000
-0<vi, wi ≤10000<vi, wi≤1000
+0<N,V≤10000
+0<vi, wi ≤10000
 
 输入样例
 
@@ -65,15 +65,16 @@ int main() {
 		cin >> v[i] >> w[i];
 
 	for (int i = 1; i <= n; i++)
-		for (int j = 1; j <= m; j++) { // 此背包有选与不选两种情况
+		for (int j = 0; j <= m; j++) { // 此物品有选与不选两种情况
 			if (j < v[i]) { // 如果背包容量比这件物品的体积还小
-				f[i][j] = f[i - 1][j]; // 那么此时这个物品就不用管
-//				cout << i << ' ' << j << ' ' << f[i][j] << endl;
+				f[i][j] = f[i - 1][j];
 			} else
-				f[i][j] = max(f[i - 1][j - v[i]] + w[i], f[i - 1][j]); // 状态转移方程,有两种情况取或者不取
-//			cout << i << ' ' << j << ' ' << f[i][j] << endl;
+				f[i][j] = max(f[i - 1][j - v[i]] + w[i], f[i - 1][j]); 
+            // 第2种写法
+            // f[i][j] = f[i - 1][j];
+            //if(j > v[i])	f[i][j] = max(f[i-1][j-v[i]] + w[i], f[i][j]);
 		}
-
+		
 	// f[i][j] 表示 体积为j下前i个物品的价值最大值
 	cout << f[n][m] << endl;
 
@@ -96,10 +97,11 @@ int main()
         cin >> v[i] >> w[i];
         
     for(int i = 1;i <= n;i++)
-        for(int j = m; j >= v[i];j--)
+        for(int j = m; j >= v[i];j--) // 逆序保证f[j-v[i]]是上一层的
         {
                 f[j] = max(f[j - v[i]] + w[i],f[j]);
         }
+    // m m-1 m-2 .... v[i] 从大到小,如果不逆序，那么f[j-v[i]]是在第i层更新过的
     cout << f[m]<< endl;
     return 0;
 }
@@ -191,12 +193,12 @@ int main()
     for(int i = 1; i <= n;i++)  cin >> v[i] >> w[i];
     
     for(int i = 1; i <= n;i++)
-        for(int j = 1; j <= m;j++)
+        for(int j = 0; j <= m;j++)
         {
             f[i][j] = f[i - 1][j]; // 第i件物品一件也不取
             if(j >= v[i])
             {
-                f[i][j] = max(f[i-1][j], f[i][j - v[i]] + w[i]);
+                f[i][j] = max(f[i][j], f[i][j - v[i]] + w[i]);
             }
            
         }
@@ -225,7 +227,7 @@ int main()
     for(int i = 1; i <= n;i++)  cin >> v[i] >> w[i];
     
     for(int i = 1; i <= n;i++)
-        for(int j = m; j >= v[i];j--)
+        for(int j = v[i]; j <= m;j++) // 不需处理逆序
         {
                 f[j] = max(f[j], f[j - v[i]] + w[i]);
         }
@@ -322,7 +324,7 @@ int main(){
     for(int i = 1; i <= n; i ++) cin >> v[i] >> w[i] >> s[i];
 
     for(int i = 1; i <= n; i ++){
-        for(int j = 1; j <= m; j ++){
+        for(int j = 0; j <= m; j ++){
             for(int k = 0; k <= s[i]; k ++){ // 遍历物品的数量
                 if(j >=  k * v[i]){
                     f[i][j] = max(f[i][j], f[i - 1][j - k * v[i]] + k * w[i]);
@@ -338,5 +340,58 @@ int main(){
 }
 
 
+```
+
+
+
+### <a href="https://www.acwing.com/problem/content/5/">多重背包二进制优化</a>
+
+由于物品数量太大，而且遍历物品数量时有很多不必要的循环，用二进制进行优化
+
+比如 数量200 = 1 + 2 + 4 + 8 + 16 + 32 + 64 + 73   ,将二进制数的进行打包成一个新的物品拥有新的体积和价值
+
+<u>这样做得原因是我们不需要一遍一遍的从1到200去遍历数量，二进制数可以凑出1 ~200的任何数量。</u>将每个物品拆分成新的物品。
+
+<mark>转化为了01背包问题，拆分的物品只能用一次</mark>
+
+```c++
+#include<iostream>
+#include<algorithm>
+using namespace std;
+const int N = 12010, M = 2010; // N * log(s) 1000 * 12
+int v[N], w[N];
+int f[M];
+int n,m;
+
+int main() {
+    cin >> n >> m;
+    int cnt = 0;
+    for(int i = 1; i <= n;i++) {
+        int a, b, s;
+        cin >> a >> b >> s; // 体积 价值 数量
+        int k = 1;
+        while(k <= s) {
+            cnt ++;
+            v[cnt] = a * k; 
+            w[cnt] = b * k;
+            s -= k;
+            k *= 2;
+        }
+        if(s > 0) {
+            cnt ++;
+            v[cnt] = a * s;
+            w[cnt] = b * s;
+        }
+        
+        
+    }
+    // 转换为01背包问题
+    n = cnt;
+    for(int i = 1; i <= n;i ++)
+        for(int j = m; j >= v[i]; j --)
+            f[j] = max(f[j], f[j - v[i]] + w[i]);
+    cout << f[m] << endl;
+    return 0;
+}
 ```
 
