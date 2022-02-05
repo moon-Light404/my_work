@@ -62,3 +62,27 @@ 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
 
 
 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
+
+
+
+**本地仓库链接远程仓库**
+
+1、新建远程仓库
+
+![image-20211223154512789](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo@master/img/202112231545953.png)
+
+2、初始化本地仓库
+
+![image-20211223154546652](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo@master/img/202112231545710.png)
+
+
+
+3、连接本地和远程仓库
+
+![image-20211223154653192](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo@master/img/202112231546255.png)
+
+<img src="https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo@master/img/202112231547799.png" alt="image-20211223154743739" style="zoom:150%;" />
+
+上传文件
+
+<img src="https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo@master/img/202112231549976.png" alt="image-20211223154900916" style="zoom:150%;" />
