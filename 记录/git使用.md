@@ -1,3 +1,5 @@
+### github本地仓库和远程仓库
+
 安装git和从本地仓库提交文件到git远程仓库中
 
 https://www.jianshu.com/p/bf95d885978e
@@ -25,7 +27,7 @@ picGo下载网址(github)
 
 https://github.com/Molunerfinn/PicGo/releases/tag/v2.3.0-beta.4
 
-### 以下是图片上传测试
+### typora图床+github仓库
 
 
 
@@ -63,7 +65,9 @@ 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
 
 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
 
+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
 
+![image-20220218181338101](https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo@master/img/image-20220218181338101.png)
 
 **本地仓库链接远程仓库**
 
@@ -86,3 +90,4 @@ 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
 上传文件
 
 <img src="https://cdn.jsdelivr.net/gh/moon-Light404/my-picGo@master/img/202112231549976.png" alt="image-20211223154900916" style="zoom:150%;" />
+
